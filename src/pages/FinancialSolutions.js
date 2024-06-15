@@ -132,12 +132,12 @@ const FinancialSolutions = () => {
                   </div>
                 </div>
                 <img
-                  src="/images/finance-1.svg"
+                  src="/images/finance-1.png"
                   alt="calculator"
                   className="hidden lg:block order-1 md:order-2"
                 />
                 <img
-                  src="/images/finance-2.svg"
+                  src="/images/finance-2.png"
                   alt="calculator"
                   className="block lg:hidden order-1 md:order-2"
                 />

@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-pattern": "url('/src/assets/images/home-bg.svg')",
-        "content-pattern": "url('/src/assets/images/content-bg.svg')",
-        "content-m-pattern": "url('/src/assets/images/content-m-bg.svg')",
-        "con-m-pattern": "url('/src/assets/images/con-m-bg.svg')",
+        "hero-pattern": "url('/src/assets/images/home-bg.png')",
+        "content-pattern": "url('/src/assets/images/content-bg.png')",
+        "content-m-pattern": "url('/src/assets/images/content-m-bg.png')",
+        "con-m-pattern": "url('/src/assets/images/com-m-bg.png')",
         "con-pattern": "url('/src/assets/images/con-bg.svg')",
-        "features-pattern": "url('/src/assets/images/features-bg.svg')",
-        "features-m-pattern": "url('/src/assets/images/features-m-bg.svg')",
-        "service-pattern": "url('/src/assets/images/service-bg.svg')",
-        "finance-pattern": "url('/src/assets/images/finance-bg.svg')",
+        "features-pattern": "url('/src/assets/images/features-bg.png')",
+        "features-m-pattern": "url('/src/assets/images/features-m-bg.png')",
+        "service-pattern": "url('/src/assets/images/services-bg.png')",
+        "finance-pattern": "url('/src/assets/images/finance-bg.png')",
       },
     },
   },

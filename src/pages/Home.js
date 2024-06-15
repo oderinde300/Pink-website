@@ -11,7 +11,7 @@ const Home = () => {
       <div className="flex justify-center">
         <div className="w-full md:w-3/4 p-4 md:p-0 pt-10">
           <img
-            src="/images/home-2.svg"
+            src="/images/home-2.png"
             alt="science"
             className="w-full object-cover"
           />
@@ -177,18 +177,18 @@ const Home = () => {
                 </p>
               </div>
               <img
-                src="/images/fire-carton.svg"
+                src="/images/fire-carton.png"
                 alt="carton image"
                 className=""
               />
             </div>
             <div className="w-full md:w-1/2 flex flex-col">
               <img
-                src="/images/dinosaur.svg"
+                src="/images/dinosaur.png"
                 alt="dinosaur image"
                 className=""
               />
-              <img src="/images/carton.svg" alt="carton image" className="" />
+              <img src="/images/carton.png" alt="carton image" className="" />
             </div>
           </div>
           <div className="w-full mx-auto flex justify-center items-center">

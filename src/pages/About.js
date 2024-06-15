@@ -18,7 +18,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center mb-[51px] md:pb-[100px]">
+      <div className="flex justify-center md:pb-[100px]">
         <div className="w-full p-6 md:p-0 md:w-3/4 flex flex-col gap-[100px]">
           <div className="flex flex-col md:flex-row gap-9 items-center justify-center">
             <div className="w-full md:w-1/2 flex flex-col justify-start gap-6 order-2 md:order-1">
@@ -32,12 +32,12 @@ const About = () => {
               </p>
             </div>
             <div className="w-full md:w-1/2 order-1 md:order-2">
-              <img src="/images/about-1.svg" alt="Flowbite Logo" />
+              <img src="/images/about-1.png" alt="Logo" />
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-9 items-center justify-center">
             <div className="w-full md:w-1/2">
-              <img src="/images/about-2.svg" alt="Flowbite Logo" />
+              <img src="/images/about-2.png" alt="Logo" />
             </div>
             <div className="w-full md:w-1/2 flex flex-col justify-start gap-6">
               <p className="text-[32px] leading-[54px] md:text-5xl">
@@ -71,12 +71,12 @@ const About = () => {
               </p>
             </div>
             <img
-              src="/images/about-3.svg"
+              src="/images/about-3.png"
               alt="people"
               className="hidden md:block"
             />
             <img
-              src="/images/about-3-m.svg"
+              src="/images/about-3-m.png"
               alt="people"
               className="block md:hidden"
             />
@@ -92,12 +92,12 @@ const About = () => {
               </p>
             </div>
             <img
-              src="/images/about-4.svg"
+              src="/images/about-4.png"
               alt="people"
               className="hidden md:block"
             />
             <img
-              src="/images/about-4-m.svg"
+              src="/images/about-4-m.png"
               alt="people"
               className="block md:hidden"
             />
@@ -113,10 +113,10 @@ const About = () => {
               </p>
             </div>
             <div className="md:block hidden w-full md:w-1/2 order-2 md:order-1">
-              <img src="/images/about-5.svg" alt="A man" />
+              <img src="/images/about-5.png" alt="A man" />
             </div>
             <div className="block md:hidden w-full md:w-1/2 order-2 md:order-1">
-              <img src="/images/about-5-m.svg" alt="A man" />
+              <img src="/images/about-5-m.png" alt="A man" />
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-9 items-center justify-center mb-[51px] md:mb-16">
@@ -130,10 +130,10 @@ const About = () => {
               </p>
             </div>
             <div className="md:block hidden w-full md:w-1/2 ">
-              <img src="/images/about-6.svg" alt="A man" />
+              <img src="/images/about-6.png" alt="A man" />
             </div>
             <div className="block md:hidden w-full md:w-1/2 ">
-              <img src="/images/about-6-m.svg" alt="A man" />
+              <img src="/images/about-6-m.png" alt="A man" />
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-9 items-center justify-center mb-[72px] md:mb-[140px]">
@@ -147,10 +147,10 @@ const About = () => {
               </p>
             </div>
             <div className="md:block hidden w-full md:w-1/2 order-2 md:order-1">
-              <img src="/images/about-7.svg" alt="A man" />
+              <img src="/images/about-7.png" alt="A man" />
             </div>
             <div className="block md:hidden w-full md:w-1/2 order-2 md:order-1">
-              <img src="/images/about-7-m.svg" alt="A man" />
+              <img src="/images/about-7-m.png" alt="A man" />
             </div>
           </div>
           <div>

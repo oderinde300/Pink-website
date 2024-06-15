@@ -12,7 +12,7 @@ const ServicesCards = () => {
               className="hidden md:flex justify-center items-center"
             />
             <img
-              src="/images/service-1.svg"
+              src="/images/service-1.png"
               alt="service"
               className="hidden md:block w-full md:w-2/5"
             />
@@ -42,7 +42,7 @@ const ServicesCards = () => {
                   alt="service"
                   className=""
                 />
-                <img src="/images/service-1.svg" alt="service" className="" />
+                <img src="/images/service-1.png" alt="service" className="" />
               </div>
               <div className="w-1/2 border-b-2 border-white pt-4"></div>
             </div>
@@ -78,7 +78,7 @@ const ServicesCards = () => {
             </div>
 
             <img
-              src="/images/service-2.svg"
+              src="/images/service-2.png"
               alt="service"
               className="hidden md:block w-full md:w-2/5"
             />
@@ -90,7 +90,7 @@ const ServicesCards = () => {
                   alt="service"
                   className=""
                 />
-                <img src="/images/service-2.svg" alt="service" className="" />
+                <img src="/images/service-2.png" alt="service" className="" />
               </div>
               <div className="w-1/2 border-b-2 border-white pt-4"></div>
             </div>
@@ -109,7 +109,7 @@ const ServicesCards = () => {
               className="hidden md:flex justify-center items-center"
             />
             <img
-              src="/images/service-3.svg"
+              src="/images/service-3.png"
               alt="service"
               className="hidden md:block w-full md:w-2/5 "
             />
@@ -136,7 +136,7 @@ const ServicesCards = () => {
                   alt="service"
                   className=""
                 />
-                <img src="/images/service-3.svg" alt="service" className="" />
+                <img src="/images/service-3.png" alt="service" className="" />
               </div>
               <div className="w-1/2 border-b-2 border-white pt-4"></div>
             </div>
@@ -168,7 +168,7 @@ const ServicesCards = () => {
               </ul>
             </div>
             <img
-              src="/images/service-4.svg"
+              src="/images/service-4.png"
               alt="service"
               className="hidden md:block w-full md:w-2/5"
             />
@@ -179,7 +179,7 @@ const ServicesCards = () => {
                   alt="service"
                   className=""
                 />
-                <img src="/images/service-2.svg" alt="service" className="" />
+                <img src="/images/service-4.png" alt="service" className="" />
               </div>
               <div className="w-1/2 border-b-2 border-white pt-4"></div>
             </div>
@@ -198,7 +198,7 @@ const ServicesCards = () => {
               className="hidden md:flex justify-center items-center"
             />
             <img
-              src="/images/service-5.svg"
+              src="/images/service-5.png"
               alt="service"
               className="hidden md:block w-full md:w-2/5"
             />
@@ -224,7 +224,7 @@ const ServicesCards = () => {
                   alt="service"
                   className=""
                 />
-                <img src="/images/service-5.svg" alt="service" className="" />
+                <img src="/images/service-5.png" alt="service" className="" />
               </div>
               <div className="w-1/2 border-b-2 border-white pt-4"></div>
             </div>

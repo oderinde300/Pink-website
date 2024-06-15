@@ -105,7 +105,7 @@ const RepaymentCalculator = () => {
               </div>
             </div>
             <img
-              src="/images/calculator-1.svg"
+              src="/images/calculator-1.png"
               alt="A man"
               className="hidden lg:block"
             />

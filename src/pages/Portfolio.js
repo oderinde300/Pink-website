@@ -21,7 +21,7 @@ const Portfolio = () => {
               <div className="hidden md:flex flex-col gap-10">
                 {[1, 2, 3, 4, 5].map((index) => (
                   <img
-                    src={`/images/portfolio-${index}.svg`}
+                    src={`/images/portfolio-${index}.png`}
                     alt="dinosaur"
                     className="w-full object-cover"
                   />
@@ -30,7 +30,7 @@ const Portfolio = () => {
               <div className="flex flex-col md:hidden gap-6">
                 {[1, 2, 3, 4, 5].map((index) => (
                   <img
-                    src={`/images/p-mobile-${index}.svg`}
+                    src={`/images/p-mobile-${index}.png`}
                     alt="dinosaur"
                     className="w-full object-cover"
                   />
