@@ -44,7 +44,7 @@ const Contact = () => {
               />
             </div>
             <div className="mb-3">
-              <select className="w-full bg-[#161616] rounded-md px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
+              <select className="w-full bg-[#161616] rounded-md h-12 px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
                 <option>Country/City</option>
                 {countries?.map((country) => (
                   <option value={country?.name}>{country?.name}</option>
@@ -52,7 +52,7 @@ const Contact = () => {
               </select>
             </div>
             <div className="mb-3">
-              <select className="w-full bg-[#161616] rounded-md px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
+              <select className="w-full bg-[#161616] rounded-md h-12  px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
                 <option>Select Service</option>
                 <option>Animation</option>
               </select>
