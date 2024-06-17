@@ -1,9 +1,26 @@
 import React from "react";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    x: "-100vh",
+  },
+  visible: {
+    x: "0vh",
+    transition: { ease: "easeInOut", duration: 1 },
+  },
+};
 
 const Portfolio = () => {
   return (
-    <section>
+    <motion.section
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <NavBar />
       <div className="flex justify-center">
         <div className="w-full flex flex-col items-center">
           <div className="w-3/4">
@@ -42,7 +59,7 @@ const Portfolio = () => {
       </div>
 
       <Footer />
-    </section>
+    </motion.section>
   );
 };
 

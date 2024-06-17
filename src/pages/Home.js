@@ -4,8 +4,10 @@ import Content from "../components/Content";
 import Footer from "../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { easeIn } from "framer-motion/dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const [backgroundImage, setBackgroundImage] = useState(
     "/images/home-sec-4-bg.png"
   );
@@ -291,7 +293,10 @@ const Home = () => {
                 transformation accessible for all businesses.
               </p>
             </div>
-            <motion.button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
+            <motion.button
+              className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out"
+              onClick={() => navigate("/contact")}
+            >
               Schedule a Consultation
             </motion.button>
           </div>
@@ -327,7 +332,12 @@ const Home = () => {
             </div>
           </div>
           <div className="w-full mx-auto flex justify-center items-center">
-            <button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
+            <button
+              className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out"
+              onClick={() => {
+                navigate("/portfolio");
+              }}
+            >
               View Our Portfolio
             </button>
           </div>
