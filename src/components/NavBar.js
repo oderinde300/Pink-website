@@ -1,9 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import useScrollDirection from "../hooks/useScrollDirection";
 
+const containerVariants = {
+  hidden: {
+    x: "-100vh",
+  },
+  visible: {
+    x: "0vh",
+    transition: { ease: "easeInOut", duration: 1 },
+  },
+  exit: {
+    x: "-100vh",
+    transition: { ease: "easeInOut" },
+  },
+};
+
 const NavBar = () => {
+  const containerVariants = {
+    hidden: {
+      x: "-100vh",
+    },
+    visible: {
+      x: "0vh",
+      transition: { ease: "easeInOut", duration: 1 },
+    },
+  };
   const menuItems = [
     {
       title: "Home",
@@ -63,6 +86,7 @@ const NavBar = () => {
             className="block lg:hidden cursor-pointer"
           />
         </div>
+
         <div
           className="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
           id="navbar-sticky"
@@ -94,36 +118,45 @@ const NavBar = () => {
             ))}
           </motion.ul>
         </div>
-        {showMobileNav && (
-          <div className="block lg:hidden h-[400px] bg-black w-full">
-            <motion.ul
-              className="font-mont flex flex-col p-4 mt-4 font-normal rtl:space-x-reverse items-center"
-              whileHover={{
-                scale: 1.1,
-              }}
-              transition={{ ease: "easeInOut", duration: 1 }}
+        <AnimatePresence>
+          {showMobileNav && (
+            <motion.div
+              className="block lg:hidden h-[400px] bg-black w-full"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
             >
-              {menuItems?.map((item, index) => (
-                <motion.li
-                  key={index}
-                  whileHover={{
-                    color: "#ef3447",
-                  }}
-                  // className="gradient-text"
-                  transition={{ ease: "easeInOut", duration: 1 }}
-                >
-                  <Link
-                    to={item.path}
-                    className="font-mont block py-2 px-3 text-[#EF1A98] leading-[30px] rounded lg:bg-transparent lg:p-0 uppercase"
-                    aria-current="page"
+              <motion.ul
+                className="font-mont flex flex-col p-4 mt-4 font-normal rtl:space-x-reverse items-center"
+                whileHover={{
+                  scale: 1.1,
+                }}
+                transition={{ ease: "easeInOut", duration: 1 }}
+              >
+                {menuItems?.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    whileHover={{
+                      color: "#ef3447",
+                    }}
+                    onClick={() => setShowMobileNav(!showMobileNav)}
+                    // className="gradient-text"
+                    transition={{ ease: "easeInOut", duration: 1 }}
                   >
-                    {item?.title}
-                  </Link>
-                </motion.li>
-              ))}
-            </motion.ul>
-          </div>
-        )}
+                    <Link
+                      to={item.path}
+                      className="font-mont block py-2 px-3 text-[#EF1A98] leading-[30px] rounded lg:bg-transparent lg:p-0 uppercase gradient-text transition-all ease-in-out"
+                      aria-current="page"
+                    >
+                      {item?.title}
+                    </Link>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
