@@ -69,6 +69,7 @@ const Content = () => {
                 strategies, fostering a community where innovation and
                 empowerment lead to success.
               </p>
+              <div className="border-b border-w w-3/4 mt-6"></div>
             </div>
             <motion.div
               className="md:hidden w-[106px] h-[106px] border border-white rounded-full hover:bg-red-500 ease-in-out flex justify-center items-center"
