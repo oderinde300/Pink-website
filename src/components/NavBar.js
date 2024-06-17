@@ -35,12 +35,13 @@ const NavBar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
 
   return (
-    <nav
-      className={`fixed w-full top-0 z-20 start-0 ${
-        // scrollDirection === "up" ? "bg-transparent" : "bg-black"
-        "bg-transparent"
-      }`}
-    >
+    // <nav
+    //   className={`fixed w-full top-0 z-20 start-0 ${
+    //     scrollDirection === "up" ? "bg-transparent" : "bg-black"
+    //     "bg-transparent"
+    //   }`}
+    // >
+    <nav className={`fixed z-50 md:relative w-full bg-black md:bg-transparent`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between lg:gap-x-[54px]  mx-auto px-4">
         <Link
           to="/"
@@ -95,9 +96,22 @@ const NavBar = () => {
         </div>
         {showMobileNav && (
           <div className="block lg:hidden h-[400px] bg-black w-full">
-            <ul className="font-mont flex flex-col p-4 mt-4 font-normal rtl:space-x-reverse items-center">
+            <motion.ul
+              className="font-mont flex flex-col p-4 mt-4 font-normal rtl:space-x-reverse items-center"
+              whileHover={{
+                scale: 1.1,
+              }}
+              transition={{ ease: "easeInOut", duration: 1 }}
+            >
               {menuItems?.map((item, index) => (
-                <li key={index}>
+                <motion.li
+                  key={index}
+                  whileHover={{
+                    color: "#ef3447",
+                  }}
+                  // className="gradient-text"
+                  transition={{ ease: "easeInOut", duration: 1 }}
+                >
                   <Link
                     to={item.path}
                     className="font-mont block py-2 px-3 text-[#EF1A98] leading-[30px] rounded lg:bg-transparent lg:p-0 uppercase"
@@ -105,9 +119,9 @@ const NavBar = () => {
                   >
                     {item?.title}
                   </Link>
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
           </div>
         )}
       </div>

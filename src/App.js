@@ -15,7 +15,7 @@ function App() {
   const location = useLocation();
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <main className="text-white mx-auto max-w-screen-xl">
         <AnimatePresence>
           <Routes location={location} key={location.key}>

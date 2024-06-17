@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import NavBar from "../components/NavBar";
 
 const containerVariants = {
   hidden: {
@@ -19,6 +20,7 @@ const FinancialSolutions = () => {
       initial="hidden"
       animate="visible"
     >
+      <NavBar />
       <div className="bg-finance-pattern bg-contain bg-no-repeat flex justify-center">
         <div className="w-full md:w-3/4 p-4 md:p-0">
           <p className="text-[32px] leading-[40px] md:text-8xl md:leading-[100px] pt-[75px]">

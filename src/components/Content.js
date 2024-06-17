@@ -44,11 +44,24 @@ const Content = () => {
 
         <div className="flex justify-center">
           <div className="w-full md:w-3/4 p-4 md:p-0 flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start gap-9 md:gap-[75px]">
-            <img
-              src="/images/circled-arrow.svg"
-              alt="icon"
-              className="hidden md:block md:max-w-[150px] md:max-h-[150px]"
-            />
+            <motion.div
+              className="w-[150px] h-[150px] border border-white rounded-full hover:bg-red-500 ease-in-out hidden md:flex justify-center items-center"
+              initial={{ background: "#000000" }}
+              whileHover={{ background: "#EF1A98" }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+            >
+              <div className="flex justify-between gap-[43px]">
+                <img
+                  src="/images/arrow-left.png"
+                  className="w-[50px] h-[50px]"
+                />
+                <img
+                  src="/images/arrow-left.png"
+                  className="w-[50px] h-[50px] rotate-180"
+                />
+              </div>
+            </motion.div>
+
             <div className="flex flex-col items-start gap-[22px] text-white max-w-[494px]">
               <p className="font-mont text-2xl">Our Mission</p>
               <p className="font-mont text-xl leading-[30px]">
@@ -57,11 +70,23 @@ const Content = () => {
                 empowerment lead to success.
               </p>
             </div>
-            <img
-              src="/images/circled-arrow.svg"
-              alt="icon"
-              className="block md:hidden w-[106px] h-[106px]"
-            />
+            <motion.div
+              className="md:hidden w-[106px] h-[106px] border border-white rounded-full hover:bg-red-500 ease-in-out flex justify-center items-center"
+              initial={{ background: "#000000" }}
+              whileHover={{ background: "#EF1A98" }}
+              transition={{ duration: 3, ease: "easeInOut" }}
+            >
+              <div className="flex justify-between">
+                <img
+                  src="/images/arrow-left.png"
+                  className="w-[50px] h-[50px]"
+                />
+                <img
+                  src="/images/arrow-left.png"
+                  className="w-[50px] h-[50px] rotate-180"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

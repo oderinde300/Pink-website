@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import NavBar from "../components/NavBar";
 
 const containerVariants = {
   hidden: {
@@ -51,6 +52,7 @@ const RepaymentBreakdown = () => {
       initial="hidden"
       animate="visible"
     >
+      <NavBar />
       <div className="flex justify-center pt-[67px]">
         <div className="w-full md:w-3/4 p-4 md:p-0">
           <div className="md:hidden md:w-full w-3/4 flex flex-col mb-12">
@@ -122,7 +124,7 @@ const RepaymentBreakdown = () => {
                   <div className="flex justify-center mt-3">
                     <button
                       disabled={!initialCommitment || !months || !totalAmount}
-                      className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs disabled:cursor-not-allowed"
+                      className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs disabled:cursor-not-allowed gradient-button transition-all ease-in-out"
                     >
                       Calculate Again
                     </button>

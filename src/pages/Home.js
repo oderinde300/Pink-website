@@ -287,9 +287,9 @@ const Home = () => {
 
       <motion.section
         className="relative flex justify-center text-white bg-no-repeat max-h-[600px]"
-        initial={{ background: "#000000" }}
+        initial={{ backgroundImage: "url(/images/con-bg.svg)" }}
         whileHover={{ backgroundImage: `url(${backgroundImage})` }}
-        transition={{ type: "easeIn", ease: "easeIn" }}
+        transition={{ duration: 3, ease: "easeInOut" }}
       >
         <div className="relative w-full md:w-3/4 p-4 md:p-0 py-[54px] md:py-[122px] ">
           <div className="relative z-10 ">
@@ -304,9 +304,9 @@ const Home = () => {
                 transformation accessible for all businesses.
               </p>
             </div>
-            <button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
+            <motion.button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
               Schedule a Consultation
-            </button>
+            </motion.button>
           </div>
         </div>
       </motion.section>
