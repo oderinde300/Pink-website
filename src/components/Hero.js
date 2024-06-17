@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="relative h-[500px] md:h-[900px] bg-black md:bg-hero-pattern bg-cover bg-no-repeat "
+      className="relative h-[500px] md:h-[900px] bg-black md:bg-hero-pattern bg-cover bg-no-repeat overflow-hidden"
       // initial={{ backgroundImage: "url(/images/home-bg.png)" }}
       initial={{ background: "#000000" }}
       animate={{ backgroundImage: `url(${backgroundImage})` }}
@@ -60,24 +60,26 @@ const Hero = () => {
           </div>
           <motion.img
             src="/images/home-ani-1.png"
-            initial={{ y: "100vh" }}
+            initial={{ y: "-30vh", x: "100%" }}
             animate={{ rotate: 360, y: "-200vh" }}
-            transition={{ type: "tween", duration: 7 }}
-            className="w-[534px] h-[534px] absolute bottom-[-10rem] right-[-15rem]"
+            transition={{ type: "tween", duration: 7, delay: 2 }}
+            // className="w-[534px] h-[534px] absolute bottom-[-10rem] right-[-15rem]"
+            className="w-[534px] h-[534px]"
           ></motion.img>
 
           <motion.img
             src="/images/home-ani-2.png"
-            initial={{ y: "100vh" }}
-            animate={{ rotate: 360, y: "-200vh" }}
-            transition={{ type: "tween", duration: 7 }}
-            className="w-[407px] h-[428px] absolute bottom-[-10rem] right-[15rem]"
+            initial={{ y: "-85vh", x: "20%" }}
+            animate={{ rotate: 360, y: "-250vh" }}
+            transition={{ type: "tween", duration: 7, delay: 2 }}
+            // className="w-[407px] h-[428px] absolute bottom-[-10rem] right-[15rem]"
+            className="w-[407px] h-[428px]"
           ></motion.img>
 
           <motion.img
             src="/images/home-phone.png"
             initial={{ y: "100vh" }}
-            animate={{ rotate: 360, y: "-320%", x: "280%" }}
+            animate={{ rotate: 360, y: "-700%", x: "280%" }}
             transition={{ type: "tween", duration: 5, delay: 2 }}
             className=""
           ></motion.img>
