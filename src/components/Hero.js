@@ -62,16 +62,16 @@ const Hero = () => {
             src="/images/home-ani-1.png"
             initial={{ y: "100vh" }}
             animate={{ rotate: 360, y: "-200vh" }}
-            transition={{ type: "tween", duration: 5 }}
-            className="w-[400px] h-[400px] absolute bottom-[-10rem] right-[-15rem]"
+            transition={{ type: "tween", duration: 7 }}
+            className="w-[534px] h-[534px] absolute bottom-[-10rem] right-[-15rem]"
           ></motion.img>
 
           <motion.img
             src="/images/home-ani-2.png"
             initial={{ y: "100vh" }}
             animate={{ rotate: 360, y: "-200vh" }}
-            transition={{ type: "tween", duration: 5 }}
-            className="w-[400px] h-[400px] absolute bottom-[-10rem] right-[15rem]"
+            transition={{ type: "tween", duration: 7 }}
+            className="w-[407px] h-[428px] absolute bottom-[-10rem] right-[15rem]"
           ></motion.img>
 
           <motion.img
