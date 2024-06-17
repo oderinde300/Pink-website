@@ -97,7 +97,7 @@ const Home = () => {
       <Hero />
       <Content />
       <div className="flex justify-center">
-        <div className="w-full md:w-3/4 p-4 md:p-0 pt-10">
+        <div className="w-full md:w-3/4 px-4 pb-4 md:p-0 mt-10 md:mt-[250px] lg:mt-10">
           <img
             src="/images/home-2.png"
             alt="science"

@@ -43,7 +43,7 @@ const Content = () => {
         </div>
 
         <div className="flex justify-center">
-          <div className="w-full md:w-3/4 p-4 md:p-0 flex flex-col md:flex-row justify-center items-start md:items-center md:justify-start gap-9 md:gap-[75px]">
+          <div className="w-full md:w-3/4 p-4 md:p-0 flex flex-wrap flex-col md:flex-row justify-center items-start md:items-center md:justify-start gap-9 md:gap-[75px]">
             <motion.div
               className="w-[150px] h-[150px] border border-white rounded-full hover:bg-red-500 ease-in-out hidden md:flex justify-center items-center"
               initial={{ background: "#000000" }}
@@ -62,9 +62,9 @@ const Content = () => {
               </div>
             </motion.div>
 
-            <div className="flex flex-col items-start gap-[22px] text-white max-w-[494px]">
+            <div className="flex flex-col items-start gap-[22px] text-white lg:max-w-[700px]">
               <p className="font-mont text-2xl">Our Mission</p>
-              <p className="font-mont text-xl leading-[30px]">
+              <p className="font-mont text-xl leading-[30px] md:text-[32px] md:leading-[38px]">
                 To equip digital creators with cutting-edge tools and
                 strategies, fostering a community where innovation and
                 empowerment lead to success.
