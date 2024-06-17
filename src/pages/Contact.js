@@ -92,7 +92,7 @@ const Contact = () => {
                   />
                   <label
                     htmlFor="fileInput"
-                    className="font-mont bg-transparent border border-white rounded-[40px] py-[13px] px-[30px] text-xs flex gap-2 items-center cursor-pointer gradient-button transition-all ease-in-out"
+                    className="font-mont bg-transparent border border-white rounded-[40px] py-[13px] px-[30px] text-xs flex gap-2 items-center cursor-pointer gradient-button2 transition-all ease-in-out"
                   >
                     <img src="/images/file.svg" alt="icon" /> Attach File
                   </label>

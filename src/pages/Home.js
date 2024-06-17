@@ -209,7 +209,7 @@ const Home = () => {
           </div>
           <div className="flex justify-center">
             <div className="w-3/4 md:w-full flex flex-col md:flex-row justify-center items-center gap-6">
-              <button className="font-mont border border-white rounded-[40px] py-[13px] px-[30px] text-xs hover:border-white gradient-button transition-all ease-in-out">
+              <button className="font-mont border border-white rounded-[40px] py-[13px] px-[30px] text-xs hover:border-white gradient-button2 transition-all ease-in-out">
                 Start Your transformation journey
               </button>
               <motion.button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
