@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="relative h-[500px] md:h-[800px] bg-black md:bg-hero-pattern bg-cover bg-no-repeat "
+      className="relative h-[500px] md:h-[900px] bg-black md:bg-hero-pattern bg-cover bg-no-repeat "
       // initial={{ backgroundImage: "url(/images/home-bg.png)" }}
       initial={{ background: "#000000" }}
       animate={{ backgroundImage: `url(${backgroundImage})` }}
@@ -77,7 +77,7 @@ const Hero = () => {
           <motion.img
             src="/images/home-phone.png"
             initial={{ y: "100vh" }}
-            animate={{ rotate: 360, y: "-100vh", x: "80vh" }}
+            animate={{ rotate: 360, y: "-320%", x: "280%" }}
             transition={{ type: "tween", duration: 5, delay: 2 }}
             className=""
           ></motion.img>

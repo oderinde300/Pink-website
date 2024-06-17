@@ -288,8 +288,11 @@ const Home = () => {
       <motion.section
         className="relative flex justify-center text-white bg-no-repeat max-h-[600px]"
         initial={{ backgroundImage: "url(/images/con-bg.svg)" }}
-        whileHover={{ backgroundImage: `url(${backgroundImage})` }}
-        transition={{ duration: 3, ease: "easeInOut" }}
+        whileHover={{
+          backgroundImage: `url(${backgroundImage})`,
+          transition: { ease: "easeInOut", duration: 3 },
+        }}
+        transition={{ type: "tween", duration: 3, ease: "easeInOut" }}
       >
         <div className="relative w-full md:w-3/4 p-4 md:p-0 py-[54px] md:py-[122px] ">
           <div className="relative z-10 ">
@@ -300,7 +303,7 @@ const Home = () => {
               <p className="text-xl w-full md:w-3/5">
                 We understand that the upfront cost of digital innovation can
                 bedaunting. Pink Power Ventures offers tailored software
-                solutions with flexiblepayment plans to make digital
+                solutions with flexible payment plans to make digital
                 transformation accessible for all businesses.
               </p>
             </div>

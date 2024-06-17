@@ -64,7 +64,7 @@ const NavBar = () => {
     //     "bg-transparent"
     //   }`}
     // >
-    <nav className={`fixed z-50 md:relative w-full bg-black md:bg-transparent`}>
+    <nav className={`fixed z-50 md:relative w-full bg-black lg:bg-transparent`}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between lg:gap-x-[54px]  mx-auto px-4">
         <Link
           to="/"
