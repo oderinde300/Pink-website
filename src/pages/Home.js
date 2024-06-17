@@ -60,24 +60,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const images = ["/images/long-arrow.svg", "/images/long-arrow-2.png"];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const handleHover = () => {
-    // Change image index to the next one in the array
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
   const [isImage1Visible, setIsImage1Visible] = useState(true);
-
-  const handleMouseEnter = () => {
-    setIsImage1Visible((prev) => !prev);
-  };
-
-  const handleMouseLeave = () => {
-    setIsImage1Visible((prev) => !prev);
-  };
 
   const handleHoverStart = () => {
     setIsImage1Visible(false);
@@ -263,10 +246,10 @@ const Home = () => {
               className=" relative"
               onHoverStart={handleHoverStart}
               onHoverEnd={handleHoverEnd}
-              initial={{ opacity: 1 }}
+              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              whileHover={{ scale: 1 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.01 }}
+              transition={{ duration: 2 }}
             >
               <motion.img
                 src={
@@ -291,6 +274,7 @@ const Home = () => {
         whileHover={{
           backgroundImage: `url(${backgroundImage})`,
           transition: { ease: "easeInOut", duration: 3 },
+          scale: 1.01,
         }}
         transition={{ type: "tween", duration: 3, ease: "easeInOut" }}
       >
