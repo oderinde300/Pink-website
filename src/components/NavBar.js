@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import useScrollDirection from "../hooks/useScrollDirection";
 
 const NavBar = () => {
   const menuItems = [
@@ -29,10 +31,16 @@ const NavBar = () => {
     },
   ];
 
+  const scrollDirection = useScrollDirection();
   const [showMobileNav, setShowMobileNav] = useState(false);
 
   return (
-    <nav className="fixed w-full z-20 top-0 start-0 bg-black">
+    <nav
+      className={`fixed w-full top-0 z-20 start-0 ${
+        // scrollDirection === "up" ? "bg-transparent" : "bg-black"
+        "bg-transparent"
+      }`}
+    >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between lg:gap-x-[54px]  mx-auto px-4">
         <Link
           to="/"
@@ -58,19 +66,32 @@ const NavBar = () => {
           className="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
           id="navbar-sticky"
         >
-          <ul className="font-mont flex flex-col p-4 lg:p-0 mt-4 font-normal lg:space-x-[30px] rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0">
+          <motion.ul
+            className="font-mont flex flex-col p-4 lg:p-0 mt-4 font-normal lg:space-x-[30px] rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0"
+            whileHover={{
+              scale: 1.1,
+            }}
+            transition={{ ease: "easeInOut", duration: 1 }}
+          >
             {menuItems?.map((item, index) => (
-              <li key={index}>
+              <motion.li
+                key={index}
+                whileHover={{
+                  color: "#ef3447",
+                }}
+                // className="gradient-text"
+                transition={{ ease: "easeInOut", duration: 1 }}
+              >
                 <Link
                   to={item.path}
-                  className="font-mont block py-2 px-3 text-[#EF1A98] leading-[30px] rounded lg:bg-transparent lg:p-0 uppercase"
+                  className="font-mont block py-2 px-3 text-[#EF1A98] leading-[30px] rounded lg:bg-transparent lg:p-0 uppercase gradient-text transition-all ease-in-out"
                   aria-current="page"
                 >
                   {item?.title}
                 </Link>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
         {showMobileNav && (
           <div className="block lg:hidden h-[400px] bg-black w-full">

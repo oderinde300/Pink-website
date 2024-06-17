@@ -8,26 +8,37 @@ import Contact from "./pages/Contact";
 import FinancialSolutions from "./pages/FinancialSolutions";
 import RepaymentCalculator from "./pages/RepaymentCalculator";
 import RepaymentBreakdown from "./pages/RepaymentBreakdown";
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
   return (
     <>
       <NavBar />
-      <main className="pt-24 text-white mx-auto max-w-screen-xl">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/financial-solutions" element={<FinancialSolutions />} />
-          <Route
-            path="/repayment-calculator"
-            element={<RepaymentCalculator />}
-          />
-          <Route path="/repayment-breakdown" element={<RepaymentBreakdown />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
+      <main className="text-white mx-auto max-w-screen-xl">
+        <AnimatePresence>
+          <Routes location={location} key={location.key}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/financial-solutions"
+              element={<FinancialSolutions />}
+            />
+            <Route
+              path="/repayment-calculator"
+              element={<RepaymentCalculator />}
+            />
+            <Route
+              path="/repayment-breakdown"
+              element={<RepaymentBreakdown />}
+            />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </AnimatePresence>
       </main>
     </>
   );

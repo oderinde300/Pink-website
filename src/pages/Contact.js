@@ -1,6 +1,17 @@
 import React, { useState } from "react";
 import Footer from "../components/Footer";
 import { countries } from "../helpers/newCountries";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    x: "-100vh",
+  },
+  visible: {
+    x: "0vh",
+    transition: { ease: "easeInOut", duration: 1 },
+  },
+};
 
 const Contact = () => {
   const [file, setFile] = useState(null);
@@ -10,7 +21,11 @@ const Contact = () => {
   };
 
   return (
-    <section className="">
+    <motion.section
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="flex justify-center pt-14 md:pt-[120px] mb-[87px]">
         <div className="w-full p-6 md:p-0 md:w-3/5">
           <p className="mb-[28px] text-xs">#1 Support in software</p>
@@ -90,7 +105,7 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
-    </section>
+    </motion.section>
   );
 };
 

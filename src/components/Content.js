@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Content = () => {
+  const [backgroundImage, setBackgroundImage] = useState(
+    "/images/content-bg-2.png"
+  );
+
+  useEffect(() => {
+    const updateBackgroundImage = () => {
+      if (window.innerWidth <= 768) {
+        setBackgroundImage("/images/content-m-bg.png");
+      } else {
+        setBackgroundImage("/images/content-bg-2.png");
+      }
+    };
+
+    // Set the initial background image
+    updateBackgroundImage();
+
+    // Add event listener to update background image on resize
+    window.addEventListener("resize", updateBackgroundImage);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener("resize", updateBackgroundImage);
+  }, []);
+
   return (
-    <div className="h-screen md:h-[964px] bg-content-m-pattern md:bg-content-pattern bg-contain bg-no-repeat flex justify-center">
+    <motion.div
+      className="h-screen md:h-[964px] bg-content-m-pattern md:bg-content-pattern bg-contain bg-no-repeat flex justify-center my-background"
+      initial={{ backgroundImage: "url(/images/content-bg.png)" }}
+      whileInView={{ backgroundImage: `url(${backgroundImage})` }}
+      transition={{ ease: "easeInOut", duration: 5 }}
+    >
       <div>
         <div className="flex justify-center">
           <div className="w-full md:w-3/4 p-4 md:p-0">
@@ -36,7 +65,7 @@ const Content = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

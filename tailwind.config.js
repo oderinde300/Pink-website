@@ -3,6 +3,18 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      keyframes: {
+        fade: {
+          "0%, 100%": { opacity: 0 },
+          "50%": { opacity: 1 },
+        },
+      },
+      // animation: {
+      //   fade: "fade 3s forwards",
+      // },
+      animation: {
+        fadeIn: "fadeIn 2s forwards",
+      },
       backgroundImage: {
         "hero-pattern": "url('/src/assets/images/home-bg.png')",
         "content-pattern": "url('/src/assets/images/content-bg.png')",

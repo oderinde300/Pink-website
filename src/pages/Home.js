@@ -1,11 +1,99 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
+import { motion, AnimatePresence } from "framer-motion";
+import { easeIn } from "framer-motion/dom";
 
 const Home = () => {
+  const [backgroundImage, setBackgroundImage] = useState(
+    "/images/home-sec-4-bg.png"
+  );
+
+  useEffect(() => {
+    const updateBackgroundImage = () => {
+      if (window.innerWidth <= 768) {
+        setBackgroundImage("/images/com-m-bg.png");
+      } else {
+        setBackgroundImage("/images/home-sec-4-bg.png");
+      }
+    };
+
+    // Set the initial background image
+    updateBackgroundImage();
+
+    // Add event listener to update background image on resize
+    window.addEventListener("resize", updateBackgroundImage);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener("resize", updateBackgroundImage);
+  }, []);
+
+  const containerVariants = {
+    hidden: {
+      // opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: { delay: 1.5, duration: 1.5 },
+    },
+    exit: {
+      // x: "-100vh",
+      // transition: { ease: "easeInOut" },
+    },
+  };
+
+  const phrases = [
+    "Marketing and Branding",
+    "Software and Application Development",
+    "Creative and Multimedia Solutions",
+    "Financial and Fundraising strategy",
+    "Digital Strategy and Innovation",
+  ];
+
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhraseIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 3000); // Change phrase every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
+  const images = ["/images/long-arrow.svg", "/images/long-arrow-2.png"];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleHover = () => {
+    // Change image index to the next one in the array
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const [isImage1Visible, setIsImage1Visible] = useState(true);
+
+  const handleMouseEnter = () => {
+    setIsImage1Visible((prev) => !prev);
+  };
+
+  const handleMouseLeave = () => {
+    setIsImage1Visible((prev) => !prev);
+  };
+
+  const handleHoverStart = () => {
+    setIsImage1Visible(false);
+  };
+
+  const handleHoverEnd = () => {
+    setIsImage1Visible(true);
+  };
+
   return (
-    <>
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <Hero />
       <Content />
       <div className="flex justify-center">
@@ -121,12 +209,12 @@ const Home = () => {
           </div>
           <div className="flex justify-center">
             <div className="w-3/4 md:w-full flex flex-col md:flex-row justify-center items-center gap-6">
-              <button className="font-mont border border-white rounded-[40px] py-[13px] px-[30px] text-xs">
+              <button className="font-mont border border-white rounded-[40px] py-[13px] px-[30px] text-xs hover:border-white gradient-button transition-all ease-in-out">
                 Start Your transformation journey
               </button>
-              <button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs">
+              <motion.button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
                 Explore Payment Options
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
@@ -134,34 +222,94 @@ const Home = () => {
       <section className="hidden md:flex justify-center text-white">
         <div className="w-3/4">
           <p className="text-base mb-[56px]">Our Services</p>
-          <div className="flex flex-wrap gap-[22px] items-center mb-[38px]">
+          <div className="flex gap-[22px] items-center mb-[38px]">
             <img src="/images/filled-star.svg" className="" alt="icon" />
-            <p className="text-[54px] leading-[72px] ">
-              Marketing and Branding
-            </p>
+            <div className="w-full relative">
+              <AnimatePresence wait>
+                <motion.div
+                  key={currentPhraseIndex}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  className="absolute top-[-2rem] text-[54px] leading-[72px] text-white"
+                >
+                  {phrases[currentPhraseIndex]}
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
-          <img src="/images/long-arrow.svg" className="" alt="arrow image" />
+          {/* <img src="/images/long-arrow.svg" className="" alt="arrow image" /> */}
+          {/* <div className="flex justify-center items-center relative">
+            <div
+              className="image-container"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img
+                src={
+                  isImage1Visible
+                    ? "/images/long-arrow.svg"
+                    : "/images/long-arrow-2.png"
+                }
+                alt={isImage1Visible ? "Image 1" : "Image 2"}
+                className="image w-full h-full transition-opacity duration-300 ease-in-out"
+              />
+            </div>
+          </div> */}
+
+          <div className="flex mt-[100px] mb-4">
+            <motion.div
+              className=" relative"
+              onHoverStart={handleHoverStart}
+              onHoverEnd={handleHoverEnd}
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              whileHover={{ scale: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.img
+                src={
+                  isImage1Visible
+                    ? "/images/long-arrow.svg"
+                    : "/images/long-arrow-2.png"
+                }
+                alt={isImage1Visible ? "Image 1" : "Image 2"}
+                className=""
+                initial={{ opacity: 1 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      <section className="flex justify-center text-white bg-con-m-pattern md:bg-con-pattern">
-        <div className="w-full md:w-3/4 p-4 md:p-0 py-[54px] md:py-[122px]">
-          <div className="flex flex-col gap-4 mb-6">
-            <p className="text-[32px] leading-[35px] md:text-[64px] md:leading-[66px] w-full md:w-4/5">
-              Concerned About High Costs of Digital Transformation?
-            </p>
-            <p className="text-xl w-full md:w-3/5">
-              We understand that the upfront cost of digital innovation can
-              bedaunting. Pink Power Ventures offers tailored software solutions
-              with flexiblepayment plans to make digital transformation
-              accessible for all businesses.
-            </p>
+      <motion.section
+        className="relative flex justify-center text-white bg-no-repeat max-h-[600px]"
+        initial={{ background: "#000000" }}
+        whileHover={{ backgroundImage: `url(${backgroundImage})` }}
+        transition={{ type: "easeIn", ease: "easeIn" }}
+      >
+        <div className="relative w-full md:w-3/4 p-4 md:p-0 py-[54px] md:py-[122px] ">
+          <div className="relative z-10 ">
+            <div className="flex flex-col gap-4 mb-6">
+              <p className="text-[32px] leading-[35px] md:text-[64px] md:leading-[66px] w-full md:w-4/5">
+                Concerned About High Costs of Digital Transformation?
+              </p>
+              <p className="text-xl w-full md:w-3/5">
+                We understand that the upfront cost of digital innovation can
+                bedaunting. Pink Power Ventures offers tailored software
+                solutions with flexiblepayment plans to make digital
+                transformation accessible for all businesses.
+              </p>
+            </div>
+            <button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
+              Schedule a Consultation
+            </button>
           </div>
-          <button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs">
-            Schedule a Consultation
-          </button>
         </div>
-      </section>
+      </motion.section>
       <section className="flex justify-center text-white md:pb-[95px]">
         <div className="w-full md:w-3/4 p-4 md:p-0">
           <div className="flex flex-col md:flex-row gap-3 mb-[108px] items-end">
@@ -192,14 +340,14 @@ const Home = () => {
             </div>
           </div>
           <div className="w-full mx-auto flex justify-center items-center">
-            <button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs">
+            <button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
               View Our Portfolio
             </button>
           </div>
         </div>
       </section>
       <Footer />
-    </>
+    </motion.div>
   );
 };
 

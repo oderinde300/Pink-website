@@ -14,3 +14,25 @@ body {
 .font-mont {
   font-family: "Montserrat", sans-serif;
 }
+
+.gradient-button:hover {
+  background-image: linear-gradient(to top left, #ef3447, #ef1a98);
+  transition: background 2s ease-in-out;
+}
+
+.gradient-text:hover {
+  color: #ef3447;
+  font-weight: 500;
+}
+
+@layer utilities {
+  .animate-fade {
+    animation: fade 2s forwards;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-background {
+    background-image: url("/public/images/finance-1.png");
+  }
+}

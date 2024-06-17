@@ -1,11 +1,27 @@
 import React from "react";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    x: "100vh",
+  },
+  visible: {
+    x: "0vh",
+    transition: { ease: "easeInOut", duration: 1 },
+  },
+};
 
 const About = () => {
   const naviagate = useNavigate();
   return (
-    <section className="text-white pt-[58px] md:pt-[120px]">
+    <motion.section
+      className="text-white pt-[58px] md:pt-[120px]"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="flex justify-center mb-[58px] md:mb-[121px]">
         <div className="w-full p-6 md:p-0 md:w-3/4">
           <p className="text-center mb-8 text-[32px] leading-[54px] md:text-8xl md:leading-[100px]">
@@ -174,7 +190,7 @@ const About = () => {
         </div>
       </div>
       <Footer />
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,9 +1,24 @@
 import React from "react";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    x: "-100vh",
+  },
+  visible: {
+    x: "0vh",
+    transition: { ease: "easeInOut", duration: 1 },
+  },
+};
 
 const FinancialSolutions = () => {
   return (
-    <section>
+    <motion.section
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="bg-finance-pattern bg-contain bg-no-repeat flex justify-center">
         <div className="w-full md:w-3/4 p-4 md:p-0">
           <p className="text-[32px] leading-[40px] md:text-8xl md:leading-[100px] pt-[75px]">
@@ -147,7 +162,7 @@ const FinancialSolutions = () => {
         </div>
       </div>
       <Footer />
-    </section>
+    </motion.section>
   );
 };
 

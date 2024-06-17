@@ -1,10 +1,26 @@
 import React from "react";
 import ServicesCards from "../components/ServicesCards";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    x: "-100vh",
+  },
+  visible: {
+    x: "0vh",
+    transition: { ease: "easeInOut", duration: 1 },
+  },
+};
 
 const Services = () => {
   return (
-    <section className="flex justify-center">
+    <motion.section
+      className="flex justify-center"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="">
         <div className="md:h-screen bg-service-pattern bg-cover bg-no-repeat flex justify-center mb-8">
           <div className="w-full p-6 md:p-0 md:w-3/4 pt-10 md:pt-[95px]">
@@ -21,7 +37,7 @@ const Services = () => {
         <ServicesCards />
         <Footer />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,6 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    y: "-100vh",
+  },
+  visible: {
+    y: "0vh",
+    transition: { ease: "easeInOut", duration: 1 },
+  },
+};
 
 const RepaymentBreakdown = () => {
   useEffect(() => {
@@ -35,7 +46,11 @@ const RepaymentBreakdown = () => {
   };
 
   return (
-    <section className="">
+    <motion.section
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="flex justify-center pt-[67px]">
         <div className="w-full md:w-3/4 p-4 md:p-0">
           <div className="md:hidden md:w-full w-3/4 flex flex-col mb-12">
@@ -168,7 +183,7 @@ const RepaymentBreakdown = () => {
         </div>
       </div>
       <Footer />
-    </section>
+    </motion.section>
   );
 };
 
