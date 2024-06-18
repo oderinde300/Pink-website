@@ -41,7 +41,8 @@ const Hero = () => {
             <div className="z-30 w-full px-6 md:px-0 md:w-3/4 flex justify-start">
               <div className="w-full md:max-w-3xl">
                 <p className="w-full text-white text-[40px] leading-[45px] md:leading-[100px] md:text-8xl font-normal pt-[95px] md:pt-[120px] mb-4">
-                  Digitize Your Business Without the Financial Burden.
+                  Digitize Your Business Without the{" "}
+                  <span className="font-bold">Financial</span> Burden.
                 </p>
 
                 <motion.div

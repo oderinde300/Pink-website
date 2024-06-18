@@ -122,7 +122,7 @@ const Home = () => {
         <div className="w-full md:w-3/4 p-4 md:p-0 bg-black bg-features-m-pattern md:bg-features-pattern bg-cover bg-no-repeat flex justify-center">
           <div className="flex flex-col md:flex-row items-end gap-4 py-[70px] px-0 md:px-20">
             <div className="flex flex-col gap-8">
-              <p className="font-mont text-white md:text-black  text-[32px] leading-[35px] md:text-[64px] md:leading-[54px] max-w-[359px]">
+              <p className="text-white md:text-black  text-[32px] leading-[35px] md:text-[64px] md:leading-[54px] max-w-[359px]">
                 Unique Features.
               </p>
               <div
@@ -133,7 +133,7 @@ const Home = () => {
                 className="bg-black rounded-md px-[53px] py-5 flex flex-col items-center gap-[29px] max-w-[388px]"
               >
                 <img src="/images/star.svg" alt="star icon" />
-                <p className="font-mont text-white text-2xl">
+                <p className=" text-white text-2xl">
                   Cost-effective modular upgrades and scalability
                 </p>
               </div>
@@ -146,7 +146,7 @@ const Home = () => {
               className="bg-black rounded-md px-[31px] py-5 flex flex-col items-center gap-[29px] max-w-[388px] md:max-w-[410px] h-full lg:max-h-[300px]"
             >
               <img src="/images/arrow.svg" alt="arrow icon" />
-              <p className="font-mont text-white text-2xl">
+              <p className=" text-white text-2xl">
                 Pay-for-what-you-use features, ensuring you don’t overspend on
                 unnecessary functionalities{" "}
               </p>
@@ -156,7 +156,7 @@ const Home = () => {
       </section>
       <section className="flex justify-center mb-[58px] text-white">
         <div className="w-full md:w-3/4 p-4 md:p-0 ">
-          <p className="font-mont flex justify-center items-center text-[32px] leading-[35px] md:text-[64px] md:leading-[54px] mb-10">
+          <p className="flex justify-center items-center text-[32px] leading-[35px] md:text-[64px] md:leading-[54px] mb-10">
             Awesome Benefits.
           </p>
           <div className="flex flex-col md:flex-row gap-6 mb-[60px]">
@@ -195,10 +195,16 @@ const Home = () => {
           </div>
           <div className="flex justify-center">
             <div className="w-3/4 md:w-full flex flex-col md:flex-row justify-center items-center gap-6">
-              <button className="font-mont border border-white rounded-[40px] py-[13px] px-[30px] text-xs hover:border-white gradient-button2 transition-all ease-in-out">
+              <button
+                className="font-mont border border-white rounded-[40px] py-[13px] px-[30px] text-xs hover:border-white gradient-button2 transition-all ease-in-out"
+                onClick={() => navigate("/financial-solutions")}
+              >
                 Start Your transformation journey
               </button>
-              <motion.button className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out">
+              <motion.button
+                className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out"
+                onClick={() => navigate("repayment-calculator")}
+              >
                 Explore Payment Options
               </motion.button>
             </div>

@@ -24,7 +24,7 @@ const NavBar = () => {
     },
     visible: {
       x: "0vh",
-      transition: { ease: "easeInOut", duration: 1 },
+      transition: { ease: "easeInOut" },
     },
   };
   const menuItems = [
@@ -37,11 +37,11 @@ const NavBar = () => {
       path: "/about",
     },
     {
-      title: "services",
+      title: "Services",
       path: "/services",
     },
     {
-      title: "contact",
+      title: "Contact",
       path: "/contact",
     },
     {
@@ -49,7 +49,7 @@ const NavBar = () => {
       path: "/repayment-calculator",
     },
     {
-      title: "financial Solutions",
+      title: "Financial Solutions",
       path: "/financial-solutions",
     },
   ];
@@ -81,7 +81,7 @@ const NavBar = () => {
           onClick={() => setShowMobileNav(!showMobileNav)}
         >
           <img
-            src="/images/menu.svg"
+            src={showMobileNav ? "/images/menu.svg" : "/images/menu.svg"}
             alt="menu icon"
             className="block lg:hidden cursor-pointer"
           />
@@ -121,32 +121,27 @@ const NavBar = () => {
         <AnimatePresence>
           {showMobileNav && (
             <motion.div
-              className="block lg:hidden h-[400px] bg-black w-full"
+              className="block lg:hidden bg-white w-full rounded-[20px] px-[28px] "
               variants={containerVariants}
               initial="hidden"
               animate="visible"
               exit="exit"
             >
-              <motion.ul
-                className="font-mont flex flex-col p-4 mt-4 font-normal rtl:space-x-reverse items-center"
-                whileHover={{
-                  scale: 1.1,
-                }}
-                transition={{ ease: "easeInOut", duration: 1 }}
-              >
+              <div className="flex justify-end items-center pt-[26px]">
+                <img
+                  src="/images/menu-close.svg"
+                  alt="menu icon"
+                  className="cursor-pointer"
+                  onClick={() => setShowMobileNav(false)}
+                />
+              </div>
+
+              <motion.ul className="flex flex-col pb-[54px] font-normal rtl:space-x-reverse">
                 {menuItems?.map((item, index) => (
-                  <motion.li
-                    key={index}
-                    whileHover={{
-                      color: "#ef3447",
-                    }}
-                    onClick={() => setShowMobileNav(!showMobileNav)}
-                    // className="gradient-text"
-                    transition={{ ease: "easeInOut", duration: 1 }}
-                  >
+                  <motion.li key={index}>
                     <Link
                       to={item.path}
-                      className="font-mont block py-2 px-3 text-[#EF1A98] leading-[30px] rounded lg:bg-transparent lg:p-0 uppercase gradient-text transition-all ease-in-out"
+                      className="block py-2 px-3 text-black hover:text-[#EF1A98] text-base leading-[25px]"
                       aria-current="page"
                     >
                       {item?.title}

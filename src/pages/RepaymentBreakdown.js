@@ -147,7 +147,7 @@ const RepaymentBreakdown = () => {
                     </p>
                   </div>
                   <img src="/images/scale.svg" alt="scale" className="mb-3" />
-                  <div className="flex justify-between items-center mb-[75px]">
+                  <div className="flex justify-between items-center pb-[75px]">
                     <div className="flex items-center gap-2">
                       <img src="/images/purple-1.svg" alt="icon" className="" />
                       <p className="text-xs leading-[32px]">
@@ -166,18 +166,7 @@ const RepaymentBreakdown = () => {
                   <p className="md:hidden block pb-5 text-base leading-[32px] text-black">
                     Repayment Summary
                   </p>
-                  <div className="hidden md:flex justify-end pb-[14px]">
-                    <div className="flex items-center gap-2">
-                      <p className=" text-[#EE3248] text-sm leading-[32px] cursor-pointer ">
-                        view repayment breakdown
-                      </p>
-                      <img
-                        src="/images/red-arrow.svg"
-                        alt="icon"
-                        className=""
-                      />
-                    </div>
-                  </div>
+                  {/* <div className="hidden md:flex justify-end pb-[14px]"></div> */}
                 </div>
               </div>
             </div>

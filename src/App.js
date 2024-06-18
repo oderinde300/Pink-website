@@ -10,13 +10,16 @@ import RepaymentCalculator from "./pages/RepaymentCalculator";
 import RepaymentBreakdown from "./pages/RepaymentBreakdown";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import FloatingIcon from "./components/FloatingIcon";
 
 function App() {
   const location = useLocation();
   return (
     <>
       {/* <NavBar /> */}
+
       <main className="text-white mx-auto max-w-screen-xl">
+        <FloatingIcon />
         <AnimatePresence>
           <Routes location={location} key={location.key}>
             <Route path="/" element={<Home />} />
