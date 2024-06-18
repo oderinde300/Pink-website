@@ -11,12 +11,18 @@ import RepaymentBreakdown from "./pages/RepaymentBreakdown";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import FloatingIcon from "./components/FloatingIcon";
+import { Helmet } from "react-helmet";
 
 function App() {
   const location = useLocation();
   return (
     <>
       {/* <NavBar /> */}
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Pink</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
 
       <main className="text-white mx-auto max-w-screen-xl">
         <FloatingIcon />

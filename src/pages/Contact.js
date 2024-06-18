@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { countries } from "../helpers/newCountries";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import { Helmet } from "react-helmet";
 
 const containerVariants = {
   hidden: {
@@ -50,6 +51,11 @@ const Contact = () => {
       initial="hidden"
       animate="visible"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Contact - Pink website</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <NavBar />
       <div className="pt-[95px] md:pt-0">
         <div className="flex justify-center pt-14 md:pt-[120px] mb-[87px]">

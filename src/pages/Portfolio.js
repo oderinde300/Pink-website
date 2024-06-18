@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 
 const containerVariants = {
   hidden: {
@@ -20,6 +21,11 @@ const Portfolio = () => {
       initial="hidden"
       animate="visible"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Portfolio - Pink website</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <NavBar />
       <div className="flex justify-center">
         <div className="w-full flex flex-col items-center">

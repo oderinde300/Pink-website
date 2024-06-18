@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import { Helmet } from "react-helmet";
 
 const containerVariants = {
   hidden: {
@@ -20,6 +21,11 @@ const FinancialSolutions = () => {
       initial="hidden"
       animate="visible"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Financial solutions - Pink website</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <NavBar />
       <div className="bg-finance-pattern bg-contain bg-no-repeat flex justify-center">
         <div className="w-full md:w-3/4 p-4 md:p-0">

@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
 import { easeIn } from "framer-motion/dom";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -80,6 +81,11 @@ const Home = () => {
       exit="exit"
       className=""
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home - Pink website</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <Hero />
       <Content />
       <div className="flex justify-center">

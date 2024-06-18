@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import { Helmet } from "react-helmet";
 
 const containerVariants = {
   hidden: {
@@ -42,6 +43,11 @@ const RepaymentCalculator = () => {
       initial="hidden"
       animate="visible"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Repayment calculator - Pink website</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <NavBar />
       <div className="flex justify-center pt-[160px] md:pt-[67px]">
         <div className="w-full md:w-3/4 p-4 md:p-0">

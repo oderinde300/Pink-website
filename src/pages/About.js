@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import { Helmet } from "react-helmet";
 
 const containerVariants = {
   hidden: {
@@ -23,6 +24,12 @@ const About = () => {
       initial="hidden"
       animate="visible"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About - Pink website</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
+
       <NavBar />
       <div className="pt-[160px] md:pt-[120px]">
         <div className="flex justify-center mb-[58px] md:mb-[121px]">

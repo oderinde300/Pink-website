@@ -3,6 +3,7 @@ import ServicesCards from "../components/ServicesCards";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
+import { Helmet } from "react-helmet";
 
 const containerVariants = {
   hidden: {
@@ -22,6 +23,11 @@ const Services = () => {
       initial="hidden"
       animate="visible"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Services - Pink website</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <NavBar />
       <div className="flex justify-center pt-[160px] md:pt-0">
         <div className="">
