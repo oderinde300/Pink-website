@@ -7,23 +7,12 @@
 body {
   background-color: black;
   background: black;
-  /* font-family: "Montserrat", sans-serif; */
-  font-family: "Roboto", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .font-mont {
   font-family: "Montserrat", sans-serif;
 }
-
-/* .gradient-button {
-  background: "#ef1a98";
-  transition: background 2s ease-in-out;
-} */
-
-/* .gradient-button:hover {
-  background: linear-gradient(to top left, #ef3447, #ef1a98);
-  transition: background 2s ease-in-out;
-} */
 
 .gradient-button {
   position: relative;

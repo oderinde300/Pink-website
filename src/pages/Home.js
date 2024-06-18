@@ -92,7 +92,7 @@ const Home = () => {
       </div>
       <section className="bg-black md:py-[147px] py-[51px] flex justify-center text-white">
         <div className="w-full md:w-3/4 p-4 md:p-0">
-          <p className="font-mont text-[32px] leading-[35px] md:text-[4rem] md:leading-[4rem] max-w-[443px] pb-[35px] md:pb-14 text-[#FEFEFE]">
+          <p className="text-[32px] leading-[35px] md:text-[4rem] md:leading-[4rem] max-w-[443px] pb-[35px] md:pb-14 text-[#FEFEFE]">
             Our Capabilities.
           </p>
           <div className="flex flex-col md:flex-row gap-9 items-center md:items-end">

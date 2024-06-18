@@ -63,8 +63,8 @@ const Content = () => {
             </motion.div>
 
             <div className="flex flex-col items-start gap-[22px] text-white lg:max-w-[700px]">
-              <p className="font-mont text-2xl">Our Mission</p>
-              <p className="font-mont text-xl leading-[30px] md:text-[32px] md:leading-[38px]">
+              <p className="text-2xl">Our Mission</p>
+              <p className="text-xl leading-[30px] md:text-[32px] md:leading-[38px] capitalize">
                 To equip digital creators with cutting-edge tools and
                 strategies, fostering a community where innovation and
                 empowerment lead to success.

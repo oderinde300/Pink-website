@@ -36,52 +36,66 @@ const Hero = () => {
     >
       <NavBar />
       <div className="relative flex justify-center">
-        <div className="relative">
-          <div className="relative w-full p-6 md:p-0 md:w-3/4">
-            <p className=" text-white text-[40px] leading-[45px] md:leading-[100px] md:text-8xl font-normal pt-[95px] md:pt-[120px] md:max-w-[799px] mb-4">
-              Digitize Your Business Without the Financial Burden.
-            </p>
+        <div className="w-full">
+          <div className="flex justify-center">
+            <div className="z-30 w-full p-6 md:p-0 md:w-3/4 flex justify-start">
+              <div className="w-full md:max-w-3xl">
+                <p className="w-full text-white text-[40px] leading-[45px] md:leading-[100px] md:text-8xl font-normal pt-[95px] md:pt-[120px] mb-4">
+                  Digitize Your Business Without the Financial Burden.
+                </p>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 5, ease: "easeInOut", duration: 5 }}
-            >
-              <p className="md:max-w-[799px] text-2xl md:text-[32px] md:leading-[41px] mb-4">
-                Affordable, Custom Digital Solutions Tailored to Your Budget.
-              </p>
-              <button
-                className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out"
-                onClick={() => naviagate("/services")}
-              >
-                Discover Our Service
-              </button>
-            </motion.div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 5, ease: "easeInOut", duration: 5 }}
+                >
+                  <p className="w-full text-2xl md:text-[32px] md:leading-[41px] mb-4">
+                    Affordable, Custom Digital Solutions Tailored to Your
+                    Budget.
+                  </p>
+                  <button
+                    className="font-mont bg-[#EF1A98] rounded-[40px] py-[13px] px-[30px] text-xs gradient-button transition-all ease-in-out"
+                    onClick={() => naviagate("/services")}
+                  >
+                    Discover Our Service
+                  </button>
+                </motion.div>
+              </div>
+            </div>
           </div>
           <motion.img
             src="/images/home-ani-1.png"
-            initial={{ y: "-30vh", x: "100%" }}
+            initial={{ y: "-20vh", x: "150%" }}
             animate={{ rotate: 360, y: "-200vh" }}
             transition={{ type: "tween", duration: 7, delay: 2 }}
             // className="w-[534px] h-[534px] absolute bottom-[-10rem] right-[-15rem]"
-            className="w-[534px] h-[534px]"
+            className="relative z-10 w-[534px] h-[534px]"
           ></motion.img>
 
           <motion.img
             src="/images/home-ani-2.png"
-            initial={{ y: "-85vh", x: "20%" }}
+            initial={{ y: "-75vh", x: "70%" }}
             animate={{ rotate: 360, y: "-250vh" }}
             transition={{ type: "tween", duration: 7, delay: 2 }}
             // className="w-[407px] h-[428px] absolute bottom-[-10rem] right-[15rem]"
-            className="w-[407px] h-[428px]"
+            className="relative z-10 w-[407px] h-[428px]"
+          ></motion.img>
+
+          <motion.img
+            src="/images/home-ani-3.png"
+            initial={{ y: "-75vh", x: "50%" }}
+            animate={{ rotate: 360, y: "-350vh" }}
+            transition={{ type: "tween", duration: 7, delay: 3 }}
+            // className="w-[407px] h-[428px] absolute bottom-[-10rem] right-[15rem]"
+            className="relative z-10 w-[358px] h-[358px]"
           ></motion.img>
 
           <motion.img
             src="/images/home-phone.png"
             initial={{ y: "100vh" }}
-            animate={{ rotate: 360, y: "-700%", x: "280%" }}
-            transition={{ type: "tween", duration: 5, delay: 2 }}
-            className=""
+            animate={{ rotate: 360, y: "-820%", x: "400%" }}
+            transition={{ type: "tween", duration: 5, delay: 3 }}
+            className="relative z-10 "
           ></motion.img>
         </div>
       </div>

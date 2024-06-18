@@ -22,7 +22,7 @@ const Footer = () => {
   ];
   return (
     <section className="flex justify-center text-white pt-9">
-      <div className="w-full px-6 md:w-3/4">
+      <div className="w-full px-6 md:px-0 md:w-3/4">
         <div className="flex flex-col md:flex-row justify-center md:justify-between items-start md:items-center mb-14">
           <img src="/images/footer-logo.svg" alt="logo" />
           <div>
