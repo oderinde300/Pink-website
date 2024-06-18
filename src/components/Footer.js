@@ -30,10 +30,10 @@ const Footer = () => {
               <p className="text-lg font-semibold mb-4">Contact</p>
               <ul className="flex flex-col gap-2 cursor-pointer text-[#B3B3B2]">
                 <li>
-                  <Link to="mailto:">pink@gmail.com</Link>
+                  <Link to="mailto:sales@pinkpower.vc">sales@pinkpower.vc</Link>
                 </li>
                 <li>
-                  <Link to="mailto:">+24 676 778 55</Link>
+                  <Link to="mailto:">WhatsApp</Link>
                 </li>
               </ul>
             </div>
