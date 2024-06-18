@@ -23,7 +23,7 @@ const FinancialSolutions = () => {
       <NavBar />
       <div className="bg-finance-pattern bg-contain bg-no-repeat flex justify-center">
         <div className="w-full md:w-3/4 p-4 md:p-0">
-          <p className="text-[32px] leading-[40px] md:text-8xl md:leading-[100px] pt-[75px]">
+          <p className="text-[32px] leading-[40px] md:text-8xl md:leading-[100px] pt-[160px] md:pt-[75px]">
             Empowering Your Digital Transformation With{" "}
             <span className="bg-[#EF1A98]">Flexible</span> Financing
           </p>

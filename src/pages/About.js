@@ -24,9 +24,9 @@ const About = () => {
       animate="visible"
     >
       <NavBar />
-      <div className="pt-[58px] md:pt-[120px]">
+      <div className="pt-[160px] md:pt-[120px]">
         <div className="flex justify-center mb-[58px] md:mb-[121px]">
-          <div className="w-full p-6 md:p-0 md:w-3/4">
+          <div className="w-full px-6 md:px-0 md:w-3/4">
             <p className="text-center mb-8 text-[32px] leading-[54px] md:text-8xl md:leading-[100px]">
               About Us
             </p>

@@ -43,7 +43,7 @@ const RepaymentCalculator = () => {
       animate="visible"
     >
       <NavBar />
-      <div className="flex justify-center pt-[67px]">
+      <div className="flex justify-center pt-[160px] md:pt-[67px]">
         <div className="w-full md:w-3/4 p-4 md:p-0">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div>

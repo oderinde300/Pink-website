@@ -23,10 +23,10 @@ const Services = () => {
       animate="visible"
     >
       <NavBar />
-      <div className="flex justify-center">
+      <div className="flex justify-center pt-[160px] md:pt-0">
         <div className="">
           <div className="md:h-screen bg-service-pattern bg-cover bg-no-repeat flex justify-center mb-8">
-            <div className="w-full p-6 md:p-0 md:w-3/4 pt-10 md:pt-[95px]">
+            <div className="w-full p-6 md:p-0 md:w-3/4 md:pt-[95px]">
               <p className="text-[40px] leading-[45px] md:text-8xl md:leading-[100px] mb-6">
                 Tailored Services to Amplify Your Digital Influence.
               </p>

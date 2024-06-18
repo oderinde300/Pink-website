@@ -53,7 +53,7 @@ const RepaymentBreakdown = () => {
       animate="visible"
     >
       <NavBar />
-      <div className="flex justify-center pt-[67px]">
+      <div className="flex justify-center pt-[160px] md:pt-[67px]">
         <div className="w-full md:w-3/4 p-4 md:p-0">
           <div className="md:hidden md:w-full w-3/4 flex flex-col mb-12">
             <p className="text-[32px] md:text-[64px] leading-[34px] md:leading-[71px] mb-3">

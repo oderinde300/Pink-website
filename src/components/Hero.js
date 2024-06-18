@@ -35,10 +35,10 @@ const Hero = () => {
       transition={{ delay: 5, ease: "easeInOut", duration: 2 }}
     >
       <NavBar />
-      <div className="relative flex justify-center">
+      <div className="relative flex justify-center pt-[95px] md:pt-0">
         <div className="w-full">
           <div className="flex justify-center">
-            <div className="z-30 w-full p-6 md:p-0 md:w-3/4 flex justify-start">
+            <div className="z-30 w-full px-6 md:px-0 md:w-3/4 flex justify-start">
               <div className="w-full md:max-w-3xl">
                 <p className="w-full text-white text-[40px] leading-[45px] md:leading-[100px] md:text-8xl font-normal pt-[95px] md:pt-[120px] mb-4">
                   Digitize Your Business Without the Financial Burden.

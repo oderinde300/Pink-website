@@ -28,7 +28,7 @@ const Contact = () => {
       animate="visible"
     >
       <NavBar />
-      <div className="">
+      <div className="pt-[95px] md:pt-0">
         <div className="flex justify-center pt-14 md:pt-[120px] mb-[87px]">
           <div className="w-full p-6 md:p-0 md:w-3/5">
             <p className="mb-[28px] text-xs">#1 Support in software</p>
