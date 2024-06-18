@@ -28,7 +28,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="relative h-[500px] md:h-[900px] bg-black md:bg-hero-pattern bg-cover bg-no-repeat overflow-hidden"
+      className="relative h-[650px] md:h-[900px] bg-black md:bg-hero-pattern bg-cover bg-no-repeat overflow-hidden"
       // initial={{ backgroundImage: "url(/images/home-bg.png)" }}
       initial={{ background: "#000000" }}
       animate={{ backgroundImage: `url(${backgroundImage})` }}
