@@ -21,20 +21,28 @@ const Contact = () => {
     setFile(e.target.files[0]);
   };
 
-  const [age, setAge] = useState("");
-  const [open, setOpen] = React.useState(false);
-
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  const services = [
+    {
+      id: "1",
+      service: "Digital Strategy and innovation",
+    },
+    {
+      id: "2",
+      service: "Software and application development",
+    },
+    {
+      id: "3",
+      service: "Creative and multi media solutions",
+    },
+    {
+      id: "4",
+      service: "Marketing and Branding",
+    },
+    {
+      id: "5",
+      service: "Financial and fund raising strategies",
+    },
+  ];
 
   return (
     <motion.section
@@ -57,7 +65,7 @@ const Contact = () => {
               <div className="mb-3">
                 <input
                   type="text"
-                  className="w-full bg-[#161616] rounded-md px-2.5 py-4 placeholder:text-white placeholder:text-xs outline-none focus:ring-0 focus:ring-transparent"
+                  className="w-full text-sm  bg-[#161616] rounded-md px-2.5 py-4 placeholder:text-white placeholder:text-xs outline-none focus:ring-0 focus:ring-transparent"
                   placeholder="Firstname"
                   name="Firstname"
                 />
@@ -65,14 +73,14 @@ const Contact = () => {
               <div className="mb-3">
                 <input
                   type="text"
-                  className="w-full bg-[#161616] rounded-md px-2.5 py-4 placeholder:text-white placeholder:text-xs outline-none focus:ring-0 focus:ring-transparent"
+                  className="w-full text-sm bg-[#161616] rounded-md px-2.5 py-4 placeholder:text-white placeholder:text-xs outline-none focus:ring-0 focus:ring-transparent"
                   placeholder="Lastname"
                 />
               </div>
               <div className="mb-3">
                 <input
                   type="email"
-                  className="w-full bg-[#161616] rounded-md px-2.5 py-4 placeholder:text-white placeholder:text-xs outline-none focus:ring-0 focus:ring-transparent"
+                  className="w-full text-sm bg-[#161616] rounded-md px-2.5 py-4 placeholder:text-white placeholder:text-xs outline-none focus:ring-0 focus:ring-transparent"
                   placeholder="Email Address"
                 />
               </div>
@@ -95,15 +103,33 @@ const Contact = () => {
               </div>
 
               <div className="mb-3">
-                <select className="w-full bg-[#161616] rounded-md h-12  px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
-                  <option>Select Service</option>
-                  <option>Animation</option>
-                </select>
+                <div className="w-full relative group">
+                  <div className="relative w-full bg-[#161616] rounded-md h-12  px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
+                    <p>Select Service</p>
+                    <img
+                      src="/images/select-icon.svg"
+                      className="absolute right-[3rem] bottom-[0.7rem]"
+                      alt="icon"
+                    />
+                  </div>
+                  <div className="bg-white px-[38px] py-[23px] hidden group-hover:block">
+                    <ul className="flex flex-col text-[#000000] text-xs leading-[30px] gap-[26px]">
+                      {services?.map((service) => (
+                        <li className="border-b border-[#D9D9D9] pb-[5px]">
+                          <div className="flex items-center gap-[9px] border-[#D9D9D9]">
+                            <input type="checkbox" />
+                            <span>{service?.service}</span>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <div className="mb-6">
                 <textarea
-                  className="w-full bg-[#161616] rounded-md px-2.5 py-4 placeholder:text-white placeholder:text-xs outline-none focus:ring-0 focus:ring-transparent"
+                  className="w-full text-sm bg-[#161616] rounded-md px-2.5 py-4 placeholder:text-white placeholder:text-xs outline-none focus:ring-0 focus:ring-transparent"
                   placeholder="Type message"
                   rows={6}
                 />
