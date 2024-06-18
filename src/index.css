@@ -87,6 +87,13 @@ body {
   font-weight: 500;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
 @layer utilities {
   .animate-fade {
     animation: fade 2s forwards;

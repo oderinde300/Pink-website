@@ -3,11 +3,6 @@ import Footer from "../components/Footer";
 import { countries } from "../helpers/newCountries";
 import { motion } from "framer-motion";
 import NavBar from "../components/NavBar";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import Button from "@mui/material/Button";
 
 const containerVariants = {
   hidden: {
@@ -82,13 +77,23 @@ const Contact = () => {
                 />
               </div>
               <div className="mb-3">
-                <select className="w-full bg-[#161616] rounded-md h-12 px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
-                  <option>Country/City</option>
-                  {countries?.map((country) => (
-                    <option value={country?.name}>{country?.name}</option>
-                  ))}
-                </select>
+                <div className="w-full relative">
+                  <img
+                    src="/images/select-icon.svg"
+                    className="absolute right-[3rem] bottom-[0.7rem]"
+                    alt="icon"
+                  />
+                  <select className="w-full bg-[#161616] rounded-md h-12 px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
+                    <option>🇺🇸 Country/City</option>
+                    {countries?.map((country) => (
+                      <option value={country?.name} data-flag={country?.emoji}>
+                        {`${country?.emoji} ${country?.name}`}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
+
               <div className="mb-3">
                 <select className="w-full bg-[#161616] rounded-md h-12  px-2.5 py-4 text-white text-xs outline-none focus:ring-0 focus:ring-transparent">
                   <option>Select Service</option>
@@ -104,33 +109,6 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="border border-white">
-                <Button sx={{ display: "block", mt: 2 }} onClick={handleOpen}>
-                  Open the select
-                </Button>
-                <FormControl sx={{ m: 1, minWidth: 120 }}>
-                  <InputLabel id="demo-controlled-open-select-label">
-                    Age
-                  </InputLabel>
-                  <Select
-                    labelId="demo-controlled-open-select-label"
-                    id="demo-controlled-open-select"
-                    open={open}
-                    onClose={handleClose}
-                    onOpen={handleOpen}
-                    value={age}
-                    label="Age"
-                    onChange={handleChange}
-                  >
-                    <MenuItem value="">
-                      <em>None</em>
-                    </MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
-                  </Select>
-                </FormControl>
-              </div>
               <div className="flex flex-col sm:flex-row justify-between items-start md:items-center gap-4 ">
                 <div className="">
                   <input
