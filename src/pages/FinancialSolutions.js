@@ -23,7 +23,7 @@ const FinancialSolutions = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Financial solutions - Pink website</title>
+        <title>Financial solutions | Pink Power Venturese</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <NavBar />

@@ -45,7 +45,7 @@ const RepaymentCalculator = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Repayment calculator - Pink website</title>
+        <title>Repayment calculator | Pink Power Ventures</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <NavBar />

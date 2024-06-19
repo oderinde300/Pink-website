@@ -25,7 +25,7 @@ const Services = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Services - Pink website</title>
+        <title>Services | Pink Power Ventures</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <NavBar />

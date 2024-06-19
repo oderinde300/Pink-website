@@ -12,6 +12,7 @@ import { AnimatePresence } from "framer-motion";
 import { useLocation } from "react-router-dom";
 import FloatingIcon from "./components/FloatingIcon";
 import { Helmet } from "react-helmet";
+import Disclaimer from "./pages/Disclaimer";
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/contact" element={<Contact />} />
             <Route
               path="/financial-solutions"

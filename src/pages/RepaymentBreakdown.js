@@ -55,7 +55,7 @@ const RepaymentBreakdown = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Repayment breakdown - Pink website</title>
+        <title>Repayment breakdown | Pink Power Ventures</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <NavBar />

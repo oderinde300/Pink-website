@@ -35,6 +35,9 @@ const Footer = () => {
                 <li>
                   <Link to="mailto:">WhatsApp</Link>
                 </li>
+                <li>
+                  <Link to="/disclaimer">Disclaimer</Link>
+                </li>
               </ul>
             </div>
             <div>

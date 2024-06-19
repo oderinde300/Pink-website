@@ -83,7 +83,7 @@ const Home = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Home - Pink website</title>
+        <title>Home | Pink Power Ventures</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <Hero />

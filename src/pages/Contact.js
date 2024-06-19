@@ -53,7 +53,7 @@ const Contact = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Contact - Pink website</title>
+        <title>Contact | Pink Power Ventures</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <NavBar />

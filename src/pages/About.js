@@ -26,7 +26,7 @@ const About = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>About - Pink website</title>
+        <title>About | Pink Power Ventures</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
 

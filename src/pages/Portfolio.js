@@ -23,7 +23,7 @@ const Portfolio = () => {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Portfolio - Pink website</title>
+        <title>Portfolio | Pink Power Ventures</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <NavBar />
