@@ -49,7 +49,7 @@ const NavBar = () => {
       path: "/repayment-calculator",
     },
     {
-      title: "Financial Solutions",
+      title: "Financial solutions",
       path: "/financial-solutions",
     },
   ];

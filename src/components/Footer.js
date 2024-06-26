@@ -33,7 +33,7 @@ const Footer = () => {
                   <Link to="mailto:sales@pinkpower.vc">sales@pinkpower.vc</Link>
                 </li>
                 <li>
-                  <Link to="mailto:">WhatsApp</Link>
+                  <Link to="">WhatsApp</Link>
                 </li>
                 <li>
                   <Link to="/disclaimer">Disclaimer</Link>

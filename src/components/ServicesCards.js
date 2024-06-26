@@ -156,7 +156,7 @@ const ServicesCards = () => {
             />
 
             <div className="w-full md:3/5 flex flex-col gap-[33px]">
-              <p className="text-4xl md:text-2xl">Marketing and Branding</p>
+              <p className="text-2xl md:text-5xl">Marketing and Branding</p>
               <ul>
                 <li className="text-xl leading-[35px] md:text-2xl list-disc">
                   Influencer Marketing: Connecting influencers with brands for
